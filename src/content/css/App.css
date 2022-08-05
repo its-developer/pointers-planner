@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body,
+html {
+  font-family: "Roboto", sans-serif !important;
+  overflow-x: hidden;
+  background: #f8f5f2 !important;
+}
+
+.ff-roboto {
+  font-family: "Roboto", sans-serif !important;
+}
+
+.form-control {
+  box-shadow: none;
+  border: 1px solid grey !important;
+  outline: none !important;
+  background-color: white !important;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+  outline: none;
+}
+
+.carousel-indicators {
+  bottom: -50px !important;
+}
+.carouselIndicator {
+  width: 10px !important;
+  height: 10px !important;
+  background: #c5bebe !important;
+  border-radius: 9999px !important;
+  margin: 0 5px 0 5px !important;
+  border: none !important;
+}
+.carouselIndicator.active {
+  background: #436372 !important;
+}
+
+#img_upper_left {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/auth_right_flowers.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+#img_lower_right {
+  width: 250px;
+  height: 300px;
+  bottom: 0%;
+  right: 0%;
+  position: absolute;
+  background-image: url("../images/auth_left_flowers.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.header_after_lg_scrn {
+  display: none;
+}
+
+.main_heading {
+  padding-top: 50px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  color: #b89562;
+}
+
+.sub_heading {
+  padding-top: 50px;
+  font-family: Georgia, serif;
+  font-weight: 600;
+  color: #597582;
+}
+
+.sub_heading_with_color {
+  font-family: Georgia, serif;
+  font-weight: 600;
+  color: #b89562;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.go_to_gallary_btn {
+  border-end-end-radius: 20px;
+  border-start-end-radius: 20px;
+  border-end-start-radius: 20px;
+  border-start-start-radius: 20px;
+  color: #b89562;
+}
+
+.go_to_gallary_btn:hover {
+  background: #b89562;
+  color: #000;
+}
+
+.profile_data_after_md_srcn {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .go_to_gallary_btn {
+    float: right;
+  }
+  .main_layout {
+    margin-top: 90px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header_before_lg_scrn {
+    display: none;
+  }
+
+  .header_after_lg_scrn {
+    display: block;
+  }
+
+  .serviceBox3 {
+    display: none;
+  }
+
+  .go_to_gallary_btn {
+    width: 100%;
+  }
+
+  .videography4 {
+    display: none;
+  }
+  .main_layout {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  .serviceBox2 {
+    display: none;
+  }
+
+  .luxury_wedding8 {
+    display: none;
+  }
+
+  .luxury_wedding7 {
+    display: none;
+  }
+
+  .luxury_wedding6 {
+    display: none;
+  }
+
+  .luxury_wedding5 {
+    display: none;
+  }
+
+  .makeup3 {
+    display: none;
+  }
+
+  .decoration3 {
+    display: none;
+  }
+
+  .footer_options {
+    text-align: center;
+  }
+
+  .videography3 {
+    display: none;
+  }
+
+  .profile_data_before_md_srcn {
+    display: none;
+  }
+
+  .profile_data_after_md_srcn {
+    display: block;
+  }
+}
