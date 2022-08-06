@@ -28,8 +28,8 @@ function Header() {
         }}
       >
         <div class="container-fluid">
-          <Link class="navbar-brand" to="/">
-            <img src={Logo} alt="#ImgNotFound" />
+          <Link class="navbar-brand px-3" to="/">
+            <img src={Logo} width={80} alt="#ImgNotFound" />
           </Link>
           <button
             class="navbar-toggler"
