@@ -2,7 +2,7 @@ import React from "react";
 import ReserveDateBackground from "../content/images/reserve_date_background.png";
 import CalendarImage from "../content/images/calendar_image.png";
 
-const ReserveTheDate = () => {
+const ReserveTheDate = ({calendarModalState, setCalendarModalState}) => {
   return (
     <div
       style={{
@@ -41,6 +41,46 @@ const ReserveTheDate = () => {
             >
               Reserves the date
             </button>
+          </div>
+        </div>
+      </div>
+      {/* Calendar Modal */}
+      <div
+        className="modal fade"
+        id="OpenModalForPaymentSuccess"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="OpenModalForPaymentSuccessLabel"
+        aria-hidden="true"
+      >
+        <div className="modal-dialog modal-dialog-centered">
+          <div className="modal-content">
+            <div className="modal-body px-3 py-4 text-center">
+              <button
+                type="button"
+                className="btn-close position-absolute end-0 top-0 p-3"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+              <h5 className="sub_heading_color">Congrulations</h5>
+              <p>
+                Your order has been confirmed. we will contact you in a while.
+              </p>
+              <h5>Order details</h5>
+              <p>Multiple days event</p>
+              <p>20,07,2022 to 25,07,2022</p>
+              <h5>$1000</h5>
+            </div>
+            <div className="modal-footer">
+              <button
+                type="button"
+                className="btn btn-dark w-100"
+                data-bs-dismiss="modal"
+              >
+                Okay
+              </button>
+            </div>
           </div>
         </div>
       </div>

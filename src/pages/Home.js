@@ -1,3 +1,4 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import carousel1 from "../content/images/carousel1.jpg";
 import carousel2 from "../content/images/carousel2.jpg";
@@ -13,9 +14,10 @@ import AbouUsFlowers from "../content/images/about_us_flowers.png";
 import ReserveTheDate from "../Components/ReserveTheDate";
 
 function Home() {
-  //   useEffect(() => {
-  //     window.scrollTo(0, 0);
-  //   }, []);
+  const [calendarModalState, setCalendarModalState] = React.useState(true);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -354,7 +356,10 @@ function Home() {
       <br />
       <br />
       <br />
-      <ReserveTheDate />
+      <ReserveTheDate
+        calendarModalState={calendarModalState}
+        setCalendarModalState={setCalendarModalState}
+      />
     </>
   );
 }
