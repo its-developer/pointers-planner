@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout";
+import DashboardLayout from "./layouts/DashboardLayout";
 import "./content/css/App.css";
 import Home from "./pages/Home";
 import NoPage from "./pages/Nopage";
@@ -54,60 +55,70 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/my_profile"
-            element={
-              <>
-                <MyProfile page={<MyProfileHome />} />{" "}
-                <title>Pointer Planner- My Profile(Home)</title>
-              </>
-            }
-          />
-          <Route
-            path="/my_profile/order"
-            element={
-              <>
-                <MyProfile page={<MyProfileOrder />} />{" "}
-                <title>Pointer Planner- My Profile(Order)</title>
-              </>
-            }
-          />
-          <Route
-            path="/my_profile/user"
-            element={
-              <>
-                <MyProfile page={<MyProfileUser />} />{" "}
-                <title>Pointer Planner- My Profile(User)</title>
-              </>
-            }
-          />
-          <Route
-            path="/my_profile/send_email"
-            element={
-              <>
-                <MyProfile page={<SendEmail />} />{" "}
-                <title>Pointer Planner- My Profile(User)</title>
-              </>
-            }
-          />
-          <Route
-            path="/my_profile/emails"
-            element={
-              <>
-                <MyProfile page={<MyProfileEmails />} />{" "}
-                <title>Pointer Planner- My Profile(Emails)</title>
-              </>
-            }
-          />
-          <Route
-            path="*"
-            element={
-              <>
-                <NoPage /> <title>Error 404</title>
-              </>
-            }
-          />
         </Route>
+        <Route
+          path="/my_profile"
+          element={
+            <>
+              <DashboardLayout>
+                <MyProfile page={<MyProfileHome />} />
+              </DashboardLayout>
+              <title>Pointer Planner- My Profile(Home)</title>
+            </>
+          }
+        />
+        <Route
+          path="/my_profile/order"
+          element={
+            <>
+              <DashboardLayout>
+                <MyProfile page={<MyProfileOrder />} />
+              </DashboardLayout>
+              <title>Pointer Planner- My Profile(Order)</title>
+            </>
+          }
+        />
+        <Route
+          path="/my_profile/user"
+          element={
+            <>
+              <DashboardLayout>
+                <MyProfile page={<MyProfileUser />} />
+              </DashboardLayout>
+              <title>Pointer Planner- My Profile(User)</title>
+            </>
+          }
+        />
+        <Route
+          path="/my_profile/send_email"
+          element={
+            <>
+              <DashboardLayout>
+                <MyProfile page={<SendEmail />} />
+              </DashboardLayout>
+              <title>Pointer Planner- My Profile(User)</title>
+            </>
+          }
+        />
+        <Route
+          path="/my_profile/emails"
+          element={
+            <>
+              <DashboardLayout>
+                <MyProfile page={<MyProfileEmails />} />
+              </DashboardLayout>
+              <title>Pointer Planner- My Profile(Emails)</title>
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <NoPage /> <title>Error 404</title>
+            </>
+          }
+        />
         <Route
           exact
           path="/login"

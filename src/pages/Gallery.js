@@ -4,6 +4,9 @@ import DecorationImg from "../content/images/DecorationImg.jpg";
 import { useEffect } from "react";
 import GalleryImageSection from "./GalleryImageSection/GalleryImageSection";
 import ReserveTheDate from "../Components/ReserveTheDate";
+import Decoration from "../Components/Gallery/Decoration";
+import Makeup from "../Components/Gallery/Makeup";
+
 
 function Gallery() {
   useEffect(() => {
@@ -143,35 +146,8 @@ function Gallery() {
         </div>
       </div>
 
-      <div className="makeup_div container-xl px-3">
-        <h3 className="sub_heading">Makeup</h3>
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup1">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup2">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup3">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-        </div>
-      </div>
-
-      <div className="decoration_div container-xl px-3">
-        <h3 className="sub_heading">Decoration</h3>
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration1">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration2">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration3">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-        </div>
-      </div>
+      <Makeup />
+      <Decoration />
 
       <br />
       <br />

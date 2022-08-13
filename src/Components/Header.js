@@ -19,7 +19,7 @@ function Header() {
   return (
     <>
       <nav
-        class="navbar navbar-expand-lg header_before_lg_scrn"
+        class="navbar navbar-expand-lg p-0"
         style={{
           boxShadow: `${
             headerBoxShadow ? "0px 4px 18px rgba(0, 0, 0, 0.2)" : ""
@@ -29,7 +29,7 @@ function Header() {
       >
         <div class="container-fluid">
           <Link class="navbar-brand px-3" to="/">
-            <img src={Logo} width={80} alt="#ImgNotFound" />
+            <img src={Logo} width={60} alt="#ImgNotFound" />
           </Link>
           <button
             class="navbar-toggler"

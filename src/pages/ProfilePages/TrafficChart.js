@@ -1,50 +1,57 @@
 import {
-  LineChart,
-  ResponsiveContainer,
-  Legend,
-  Tooltip,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
 } from "recharts";
+
 import React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 // Sample chart data
-const pdata = [
+
+const data = [
   {
-    name: "MongoDb",
-    student: 11,
-    fees: 120,
+    name: "Jun",
+    traffic: 200,
   },
   {
-    name: "Javascript",
-    student: 15,
-    fees: 12,
+    name: "Jul",
+    traffic: 500,
   },
   {
-    name: "PHP",
-    student: 5,
-    fees: 10,
+    name: "Aug",
+    traffic: 500,
   },
   {
-    name: "Java",
-    student: 10,
-    fees: 5,
+    name: "Sep",
+    traffic: 800,
   },
   {
-    name: "C#",
-    student: 9,
-    fees: 4,
+    name: "Oct",
+    traffic: 1000,
   },
   {
-    name: "C++",
-    student: 10,
-    fees: 8,
+    name: "Nov",
+    traffic: 2000,
   },
 ];
+
+const CustomTooltip = ({ active, payload, label }) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="p-2 border-0 bg-white border-grey">
+        <p className="label m-0">{`${label} : ${payload[0].value}`}</p>
+      </div>
+    );
+  }
+
+  return null;
+};
 
 function Charts({ title }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -91,15 +98,28 @@ function Charts({ title }) {
             </div>
           </div>
           <ResponsiveContainer aspect={3} style={{ width: "100%" }}>
-            <LineChart data={pdata}>
-              <CartesianGrid />
-              <XAxis dataKey="name" interval={"preserveStartEnd"} />
-              <YAxis></YAxis>
-              <Legend />
-              <Tooltip />
-              <Line dataKey="student" stroke="black" activeDot={{ r: 8 }} />
-              {/* <Line dataKey="fees" stroke="red" activeDot={{ r: 8 }} /> */}
-            </LineChart>
+            <AreaChart
+              width={500}
+              height={400}
+              data={data}
+              margin={{
+                top: 10,
+                right: 30,
+                left: 0,
+                bottom: 0,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Tooltip content={<CustomTooltip />} />
+              <Area
+                type="monotone"
+                dataKey="traffic"
+                stroke="rgba(183,181,232, .4)"
+                fill="rgba(183,181,232, .2)"
+              />
+            </AreaChart>
           </ResponsiveContainer>
         </div>
       </div>

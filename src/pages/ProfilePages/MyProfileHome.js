@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Charts from "./Chart";
+import TrafficChart from "./TrafficChart";
+import RevenueChart from "./RevenueChart";
 
 function MyProfileHome() {
   return (
@@ -27,9 +29,9 @@ function MyProfileHome() {
           })}
         </div>
       </div>
-      <Charts />
-      <Charts />
-      <Charts />
+      <Charts title={"Sales Report"} />
+      <RevenueChart title={"Revenue Report"} />
+      <TrafficChart title={"Traffic"} />
     </div>
   );
 }

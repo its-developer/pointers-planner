@@ -11,11 +11,19 @@ html {
   font-family: "Roboto", sans-serif !important;
 }
 
+img {
+  object-fit: cover !important;
+}
+
 .form-control {
   box-shadow: none;
-  border: 1px solid grey !important;
+  border: none !important;
+  border-bottom: 1px solid grey !important;
+  padding: 5px 0px !important;
+  font-weight: bold !important;
+  border-radius: 0px !important;
+  background: none !important;
   outline: none !important;
-  background-color: white !important;
 }
 
 .form-control:focus {
@@ -115,7 +123,7 @@ html {
     float: right;
   }
   .main_layout {
-    margin-top: 90px;
+    margin-top: 71px;
   }
 }
 

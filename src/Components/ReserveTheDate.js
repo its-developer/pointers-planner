@@ -2,7 +2,7 @@ import React from "react";
 import ReserveDateBackground from "../content/images/reserve_date_background.png";
 import CalendarImage from "../content/images/calendar_image.png";
 
-const ReserveTheDate = ({calendarModalState, setCalendarModalState}) => {
+const ReserveTheDate = ({ calendarModalState, setCalendarModalState }) => {
   return (
     <div
       style={{
@@ -26,7 +26,7 @@ const ReserveTheDate = ({calendarModalState, setCalendarModalState}) => {
             <h3 className="sub_heading_with_color pt-3 pt-md-0">
               Reserves the date
             </h3>
-            <p className="fw-bold">
+            <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
               cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
               maiores iste repellendus ad, tenetur odit dignissimos sint quidem

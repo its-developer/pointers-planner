@@ -13,6 +13,11 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import enLocale from "date-fns/locale/en-US";
+import Photography from "../content/images/photography.png";
+import WeedingGallery2Img from "../content/images/weeding-gallery2.png";
+import Makeup from "../content/images/makeup.png";
+import WeedingDinnerDecoration from "../content/images/wedding-dinner-decoration.png";
+import MakeupImg from "../content/images/MakeupImg.jpg";
 
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -72,44 +77,40 @@ function Services() {
               You can select One or Multiple services with your Location.
             </p>
           </div>
-          <div className="px-3">
-            {/* <select style={{ borderTop: "0", borderLeft: "0", borderRight: "0" }}>
-            <option>Multiple days event&emsp;</option>
-            <option>Option 1</option>
-            <option>Option 2</option>
-            <option>Option 3</option>
-          </select> */}
-            <FormControl
-              sx={{ m: 1, width: 300 }}
-              style={{ backgroundColor: "white" }}
-            >
-              <InputLabel id="demo-multiple-checkbox-label">
-                Multiple Days Event
-              </InputLabel>
-              <Select
-                labelId="demo-multiple-checkbox-label"
-                id="demo-multiple-checkbox"
-                multiple
-                value={eventDays}
-                onChange={handleChange}
-                input={<OutlinedInput label="Multiple Days Event" />}
-                renderValue={(selected) => (
-                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                    {selected.map((value) => (
-                      <Chip key={value} label={value} />
-                    ))}
-                  </Box>
-                )}
-                MenuProps={MenuProps}
+          <div className="row px-3">
+            <div className="col-md-3 col-6 pt-3">
+              <FormControl
+                sx={{ m: 1, width: "100%" }}
+                style={{ backgroundColor: "white" }}
               >
-                {daysEvent.map((name) => (
-                  <MenuItem key={name} value={name}>
-                    <Checkbox checked={eventDays.indexOf(name) > -1} />
-                    <ListItemText primary={name} />
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+                <InputLabel id="demo-multiple-checkbox-label">
+                  Multiple Days Event
+                </InputLabel>
+                <Select
+                  labelId="demo-multiple-checkbox-label"
+                  id="demo-multiple-checkbox"
+                  multiple
+                  value={eventDays}
+                  onChange={handleChange}
+                  input={<OutlinedInput label="Multiple Days Event" />}
+                  renderValue={(selected) => (
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                      {selected.map((value) => (
+                        <Chip key={value} label={value} />
+                      ))}
+                    </Box>
+                  )}
+                  MenuProps={MenuProps}
+                >
+                  {daysEvent.map((name) => (
+                    <MenuItem key={name} value={name}>
+                      <Checkbox checked={eventDays.indexOf(name) > -1} />
+                      <ListItemText primary={name} />
+                    </MenuItem>
+                  ))}
+                </Select>
+              </FormControl>
+            </div>
           </div>
           <div className="row px-3">
             <div className="col-md-3 col-6 pt-3">
@@ -189,7 +190,7 @@ function Services() {
                 <div className="card">
                   <div>
                     <img
-                      src="https://www.theknot.com/tk-media/images/4f509983-0edc-4320-81f3-bb67621fd9af~rs_768.h"
+                      src={WeedingGallery2Img}
                       alt="#ImgNotFound"
                       className="w-100"
                       style={{ maxHeight: "400px" }}
@@ -199,20 +200,24 @@ function Services() {
               </div>
               <div className="col-lg-6 col-xl-7 detail_section order-lg-1">
                 <img
-                  src="https://newhorizon-bsh.s3.ap-south-1.amazonaws.com/nhengineering/bsh/wp-content/uploads/2020/01/17113522/default_image_01.png"
+                  src={Photography}
                   alt="#ImgNotFound"
                   width="50px"
-                  height="50px"
                   className="my-3 my-lg-0"
                 />
-                <h3 className="sub_heading_with_color pt-3">How we work</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Commodi cupiditate voluptates ut iusto autem, enim dolore
-                  vitae laboriosam maiores iste repellendus ad, tenetur odit
-                  dignissimos sint quidem asperiores! Dolor, excepturi. Lorem
-                  ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-                  cupiditate voluptates ut iusto autem.
+                <h3 className="sub_heading_with_color pt-3">
+                  Photography/Videography
+                </h3>
+                <p className="text-muted m-0 pe-md-5 px-0">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna
+                  aliqua.. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod tempor incididunt ut labore et dolore
+                  magna aliqua Lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua..
                 </p>
               </div>
             </div>
@@ -222,7 +227,7 @@ function Services() {
                 <div className="card">
                   <div>
                     <img
-                      src="https://setmywed.com/blog/wp-content/uploads/2019/12/entry.jpg"
+                      src={MakeupImg}
                       alt="#ImgNotFound"
                       className="w-100"
                       style={{ maxHeight: "400px" }}
@@ -232,14 +237,13 @@ function Services() {
               </div>
               <div className="col-lg-6 col-xl-7 detail_section">
                 <img
-                  src="https://newhorizon-bsh.s3.ap-south-1.amazonaws.com/nhengineering/bsh/wp-content/uploads/2020/01/17113522/default_image_01.png"
+                  src={Makeup}
                   alt="#ImgNotFound"
                   width="50px"
-                  height="50px"
                   className="my-3 my-lg-0"
                 />
-                <h3 className="sub_heading_with_color pt-3">About Us</h3>
-                <p>
+                <h3 className="sub_heading_with_color pt-3">Makeup</h3>
+                <p className="text-muted">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Commodi cupiditate voluptates ut iusto autem, enim dolore
                   vitae laboriosam maiores iste repellendus ad, tenetur odit
@@ -265,14 +269,21 @@ function Services() {
               </div>
               <div className="col-lg-6 col-xl-7 detail_section order-lg-1">
                 <img
-                  src="https://newhorizon-bsh.s3.ap-south-1.amazonaws.com/nhengineering/bsh/wp-content/uploads/2020/01/17113522/default_image_01.png"
+                  src={WeedingDinnerDecoration}
                   alt="#ImgNotFound"
                   width="50px"
-                  height="50px"
                   className="my-3 my-lg-0"
                 />
-                <h3 className="sub_heading_with_color pt-3">How we work</h3>
-                <p>
+                <h3 className="sub_heading_with_color pt-3">Decoration</h3>
+                <p className="text-muted">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Commodi cupiditate voluptates ut iusto autem, enim dolore
+                  vitae laboriosam maiores iste repellendus ad, tenetur odit
+                  dignissimos sint quidem asperiores! Dolor, excepturi. Lorem
+                  ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+                  cupiditate voluptates ut iusto autem.
+                </p>
+                <p className="text-muted">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Commodi cupiditate voluptates ut iusto autem, enim dolore
                   vitae laboriosam maiores iste repellendus ad, tenetur odit

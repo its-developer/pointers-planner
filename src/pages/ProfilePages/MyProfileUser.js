@@ -41,9 +41,11 @@ function MyProfileUser() {
                 </div>
                 <div className="col-6">
                   <h6 className="fw-bold">Message :</h6>
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div className="col-3">
                   <Link
@@ -99,9 +101,11 @@ function MyProfileUser() {
                 </div>
                 <div className="col-6">
                   <h6 className="fw-bold">Message :</h6>
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div className="col-3">
                   <Link
@@ -156,9 +160,11 @@ function MyProfileUser() {
                 </div>
                 <div className="col-6">
                   <h6 className="fw-bold">Message :</h6>
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. proident,
+                  sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
                 <div className="col-3">
                   <Link

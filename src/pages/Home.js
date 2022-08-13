@@ -3,15 +3,17 @@ import { Link } from "react-router-dom";
 import carousel1 from "../content/images/carousel1.jpg";
 import carousel2 from "../content/images/carousel2.jpg";
 import carousel3 from "../content/images/carousel3.jpg";
-import LuxuryWeddingImg from "../content/images/LuxuryWeddingImg.jpg";
-import MakeupImg from "../content/images/MakeupImg.jpg";
-import DecorationImg from "../content/images/DecorationImg.jpg";
+import Photography from "../content/images/photography.png";
+import WeedingDinnerDecoration from "../content/images/wedding-dinner-decoration.png";
+import Makeup from "../content/images/makeup.png";
 import ServiceCard from "./HomepageComponent/ServicesCard";
 import { useEffect } from "react";
 import GalleryImageSection from "./GalleryImageSection/GalleryImageSection";
 import AuthLeftImage from "../content/images/auth_left_flowers.png";
 import AbouUsFlowers from "../content/images/about_us_flowers.png";
 import ReserveTheDate from "../Components/ReserveTheDate";
+import Decoration from "../Components/Gallery/Decoration";
+import MakeupComp from "../Components/Gallery/Makeup";
 
 function Home() {
   const [calendarModalState, setCalendarModalState] = React.useState(true);
@@ -58,6 +60,7 @@ function Home() {
             <img
               src={carousel2}
               className="d-block w-100 p-0"
+              style={{ height: "80vh" }}
               alt="#ImgNotFound"
             />
           </div>
@@ -68,6 +71,7 @@ function Home() {
             <img
               src={carousel1}
               className="d-block w-100 p-0"
+              style={{ height: "80vh" }}
               alt="#ImgNotFound"
             />
           </div>
@@ -78,34 +82,11 @@ function Home() {
             <img
               src={carousel3}
               className="d-block w-100 p-0"
+              style={{ height: "80vh" }}
               alt="#ImgNotFound"
             />
           </div>
         </div>
-        {/* <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#CarouselHomepageSlider"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#CarouselHomepageSlider"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button> */}
       </div>
 
       <div className="service_div container-xl mt-5">
@@ -116,45 +97,32 @@ function Home() {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active">
-              <div className="row">
-                <div className="col-12 col-md-6 col-lg-4 serviceBox1">
-                  <ServiceCard />
+            {[0, 1, 2].map((item) => {
+              return (
+                <div
+                  key={item}
+                  className={`carousel-item ${item == 0 ? "active" : ""}`}
+                >
+                  <div className="row">
+                    <div className="col-12 col-md-6 col-lg-4 serviceBox1">
+                      <ServiceCard
+                        title={"Photography/Videography"}
+                        image={Photography}
+                      />
+                    </div>
+                    <div className="col-md-6 col-lg-4 serviceBox2">
+                      <ServiceCard
+                        title={"Decoration"}
+                        image={WeedingDinnerDecoration}
+                      />
+                    </div>
+                    <div className="col-lg-4 serviceBox3">
+                      <ServiceCard title={"Makeup"} image={Makeup} />
+                    </div>
+                  </div>
                 </div>
-                <div className="col-md-6 col-lg-4 serviceBox2">
-                  <ServiceCard />
-                </div>
-                <div className="col-lg-4 serviceBox3">
-                  <ServiceCard />
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="row">
-                <div className="col-12 col-md-6 col-lg-4 serviceBox1">
-                  <ServiceCard />
-                </div>
-                <div className="col-md-6 col-lg-4 serviceBox2">
-                  <ServiceCard />
-                </div>
-                <div className="col-lg-4 serviceBox3">
-                  <ServiceCard />
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="row">
-                <div className="col-12 col-md-6 col-lg-4 serviceBox1">
-                  <ServiceCard />
-                </div>
-                <div className="col-md-6 col-lg-4 serviceBox2">
-                  <ServiceCard />
-                </div>
-                <div className="col-lg-4 serviceBox3">
-                  <ServiceCard />
-                </div>
-              </div>
-            </div>
+              );
+            })}
           </div>
           <div className="carousel-indicators">
             <button
@@ -184,65 +152,13 @@ function Home() {
       </div>
 
       <div className="luxury_wedding_div container-xl px-3 mt-3">
-        <h1 className="main_heading mt-5 pt-5 mb-5">Luxury Wedding</h1>
+        <h1 className="main_heading mt-5 pt-5 mb-5">Our Luxury Weddings</h1>
         <GalleryImageSection />
-        {/* <div className="row">
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding1">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding2">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding3">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding4">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-md-4 col-lg-3 p-2 luxury_wedding5">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-md-4 col-lg-3 p-2 luxury_wedding6">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-md-4 col-lg-3 p-2 luxury_wedding7">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                    <div className="col-md-4 col-lg-3 p-2 luxury_wedding8">
-                        <img src={LuxuryWeddingImg} alt="#ImgNotFound" className='w-100' />
-                    </div>
-                </div> */}
       </div>
 
-      <div className="makeup_div container-xl px-3">
-        <h3 className="sub_heading">Makeup</h3>
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup1">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup2">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 makeup3">
-            <img src={MakeupImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-        </div>
-      </div>
+      <MakeupComp />
 
-      <div className="decoration_div container-xl px-3">
-        <h3 className="sub_heading">Decoration</h3>
-        <div className="row">
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration1">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration2">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-          <div className="col-12 col-sm-6 col-md-4 p-2 decoration3">
-            <img src={DecorationImg} alt="#ImgNotFound" className="w-100" />
-          </div>
-        </div>
-      </div>
+      <Decoration />
 
       <div className="decoration_div container-xl px-3 pt-4 pb-md-4">
         <Link
@@ -255,7 +171,7 @@ function Home() {
             color: "#B89562",
           }}
         >
-          Go to Gallery <i className="fa fa-long-arrow-right"></i>
+          Go to Gallery <i className="ms-3 fa fa-long-arrow-right"></i>
         </Link>
       </div>
 
@@ -291,23 +207,28 @@ function Home() {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-xl-7 detail_section order-md-1">
+          <div className="col-md-6 col-xl-7 detail_section order-md-1  pe-md-5 px-0">
             <h3 className="sub_heading_with_color pt-3">How we work</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-              cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
-              maiores iste repellendus ad, tenetur odit dignissimos sint quidem
-              asperiores! Dolor, excepturi. Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Commodi cupiditate voluptates ut
-              iusto autem.
+            <p className="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.
             </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
-              cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
-              maiores iste repellendus ad, tenetur odit dignissimos sint quidem
-              asperiores! Dolor, excepturi. Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Commodi cupiditate voluptates ut
-              iusto autem.
+            <p className="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.
+            </p>
+            <p className="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat. proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
         </div>
@@ -333,7 +254,23 @@ function Home() {
           </div>
           <div className="col-md-6 col-xl-7 detail_section">
             <h3 className="sub_heading_with_color pt-3">About Us</h3>
-            <p>
+            <p className="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+              cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
+              maiores iste repellendus ad, tenetur odit dignissimos sint quidem
+              asperiores! Dolor, excepturi. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Commodi cupiditate voluptates ut
+              iusto autem.
+            </p>
+            <p className="text-muted">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+              cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
+              maiores iste repellendus ad, tenetur odit dignissimos sint quidem
+              asperiores! Dolor, excepturi. Lorem ipsum dolor sit amet,
+              consectetur adipisicing elit. Commodi cupiditate voluptates ut
+              iusto autem.
+            </p>
+            <p className="text-muted">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
               cupiditate voluptates ut iusto autem, enim dolore vitae laboriosam
               maiores iste repellendus ad, tenetur odit dignissimos sint quidem

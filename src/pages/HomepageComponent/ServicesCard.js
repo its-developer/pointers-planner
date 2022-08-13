@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function ServiceCard() {
+function ServiceCard({ title, image, description }) {
   return (
     <>
       <div
@@ -14,17 +14,17 @@ function ServiceCard() {
           className="card-body text-center rounded"
           style={{ border: "1px solid #FCBDFC" }}
         >
-          <i
+          {/* <i
             className="fa fa-camera"
             style={{ fontSize: "50px", color: "#C876C9" }}
-          ></i>
+          ></i> */}
+          <img src={image} width={60} />
           <h5 style={{ color: "#B89562" }} className="pt-3 fw-bold">
-            Photography/ Videography
+            {title}
           </h5>
           <p className="card-text text-muted small">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia
-            quasi ducimus perspiciatis assumenda doloremque cupiditate officiis
-            non accusamus expedita iure.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </div>
       </div>

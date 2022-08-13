@@ -1,17 +1,23 @@
 import { Link } from "react-router-dom";
 import LuxuryWeddingImg from "../../content/images/LuxuryWeddingImg.jpg";
+import Photography from "../../content/images/photography.png";
+import WeedingGalleryImg from "../../content/images/weeding-gallery.png";
+import Makeup from "../../content/images/makeup.png";
+import WeedingDinnerDecoration from "../../content/images/wedding-dinner-decoration.png";
+import MakeupImg from "../../content/images/MakeupImg.jpg";
+import GalleryImageSection from "../GalleryImageSection/GalleryImageSection";
 
 function SelectedServices() {
   return (
     <>
       <div className="service_div container-xl">
         <div className="pt-4 text-center">
-          <h1 className="main_heading">Our Services</h1>
+          <h1 className="main_heading">Services</h1>
           <p className="text-muted fw-bold">
             You can select One or Multiple services with your Location.
           </p>
         </div>
-        <div className="selected_services">
+        <div className="selected_services mt-5 pt-5">
           <h3 className="sub_heading">Selected Services</h3>
           <div
             className="card"
@@ -21,24 +27,25 @@ function SelectedServices() {
               <div className="row">
                 <div className="col-md-4 image_section order-md-2 d-flex align-items-center justify-content-center justify-content-md-end">
                   <img
-                    src="https://www.theknot.com/tk-media/images/4f509983-0edc-4320-81f3-bb67621fd9af~rs_768.h"
+                    src={WeedingGalleryImg}
                     alt="#ImgNotFound"
                     style={{
-                      maxHeight: 250,
-                      maxWidth: 250,
+                      height: 250,
+                      width: 200,
                       borderRadius: "15px",
                     }}
                   />
                 </div>
                 <div className="col-md-8 detail_section order-md-1">
                   <img
-                    src="https://newhorizon-bsh.s3.ap-south-1.amazonaws.com/nhengineering/bsh/wp-content/uploads/2020/01/17113522/default_image_01.png"
+                    src={Photography}
                     alt="#ImgNotFound"
                     width="50px"
-                    height="50px"
                     className="my-3 my-lg-0"
                   />
-                  <h3 className="sub_heading_with_color pt-3">How we work</h3>
+                  <h3 className="sub_heading_with_color pt-3">
+                    Photography/Videography
+                  </h3>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Commodi cupiditate voluptates ut iusto autem, enim dolore
@@ -52,25 +59,24 @@ function SelectedServices() {
               <div className="row pt-5">
                 <div className="col-md-4 image_section order-md-2 d-flex align-items-center justify-content-center justify-content-md-end">
                   <img
-                    src="https://www.theknot.com/tk-media/images/4f509983-0edc-4320-81f3-bb67621fd9af~rs_768.h"
+                    src={MakeupImg}
                     alt="#ImgNotFound"
                     style={{
-                      maxHeight: 250,
-                      maxWidth: 250,
+                      height: 250,
+                      width: 200,
                       borderRadius: "15px",
                     }}
                   />
                 </div>
                 <div className="col-md-8 detail_section order-md-1">
                   <img
-                    src="https://newhorizon-bsh.s3.ap-south-1.amazonaws.com/nhengineering/bsh/wp-content/uploads/2020/01/17113522/default_image_01.png"
+                    src={Makeup}
                     alt="#ImgNotFound"
                     width="50px"
-                    height="50px"
-                    className="my-3 my-lg-0"
+                    style={{ maxHeight: "400px" }}
                   />
-                  <h3 className="sub_heading_with_color pt-3">How we work</h3>
-                  <p>
+                  <h3 className="sub_heading_with_color pt-3">Makeup</h3>
+                  <p className="text-muted">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Commodi cupiditate voluptates ut iusto autem, enim dolore
                     vitae laboriosam maiores iste repellendus ad, tenetur odit
@@ -170,64 +176,7 @@ function SelectedServices() {
 
         <div className="gallery_div container-xl px-3">
           <h3 className="sub_heading">Gallery</h3>
-          <div className="row">
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding1">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding2">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding3">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2 luxury_wedding4">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-md-4 col-lg-3 p-2 luxury_wedding5">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-md-4 col-lg-3 p-2 luxury_wedding6">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-md-4 col-lg-3 p-2 luxury_wedding7">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-            <div className="col-md-4 col-lg-3 p-2 luxury_wedding8">
-              <img
-                src={LuxuryWeddingImg}
-                alt="#ImgNotFound"
-                className="w-100"
-              />
-            </div>
-          </div>
+          <GalleryImageSection />
         </div>
       </div>
 
